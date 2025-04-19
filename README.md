@@ -1,15 +1,31 @@
-# Github Actions Tutorial
+# Vue.js + Flask Web Application
 
-## Introduction
-Github Actions is a CI/CD tool that allows you to automate your workflow. It is a powerful tool that can be used to build, test, package, release, and deploy your code. In this tutorial, we will learn how to create a Github Actions workflow.
+This is a full-stack web application using Vue.js for the frontend and Flask for the backend. The project is containerized using Docker and deployed to AWS ECR and EC2 through GitHub Actions automation.
 
-## Prerequisites
-- Github account
-- Repository with code (you can use this repository)
+## Project Structure
 
-## Steps
-2. Create a new file in the `.github/workflows` directory
-3. Define the workflow
-4. Push the changes to the repository
-5. Check the Actions tab in the repository
+```
+.
+├── frontend/          # Vue.js frontend code
+├── backend/           # Flask backend code
+├── .github/
+│   └── workflows/
+│       └── deploy.yml # GitHub Actions workflow configuration
+├── Dockerfile.frontend # Frontend Docker configuration
+├── Dockerfile.backend  # Backend Docker configuration
+├── docker-compose.yml  # Docker Compose configuration
+└── nginx.conf         # Nginx configuration
+```
 
+## System Architecture
+
+![System Architecture](docs/architecture.png)
+
+## Tech Stack
+
+- Frontend: Vue.js
+- Backend: Flask
+- Database: Configured as needed
+- Containerization: Docker
+- Deployment: AWS ECR + EC2
+- CI/CD: GitHub Actions
